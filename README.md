@@ -1,4 +1,4 @@
 ## RÉSZEK
-Brazillia - Ferenc Áron
-Afrika - Tóth Roland
-Ázsia - Karanyicz Kristóf
+Brazillia - Ferenc Áron <br>
+Afrika - Tóth Roland <br>
+Ázsia - Karanyicz Kristóf <br>
