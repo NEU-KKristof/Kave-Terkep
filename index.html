@@ -1,1 +1,297 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prémium autók</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Német autók</h1>
+        <p>Fedezze fel a ezeket a német autókat</p>
+    </header>
+    <br><br>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" style="height: 600px;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/kepek/porsche_hatter2.jpg" class="d-block w-100 valtozo_kep" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/kepek/mercedes_hatter.jpg" class="d-block w-100 valtozo_kep" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./kepek/bmw_hatter2.jpg" class="d-block w-100 valtozo_kep" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+    <div class="tabs">
+        <div class="tab active logo" onclick="showCar('bmw')">
+            <img class="logo_kep" src="/kepek/BMW-Logo2.png" alt="BMW Logo">
+            <span>BMW</span>
+        </div>
+        <div class="tab logo" onclick="showCar('mercedes')">
+            <img class="logo_kep" src="/kepek/mercedes_logo.jpg" alt="Mercedes Logo">
+            <span>Mercedes</span>
+        </div>
+        <div class="tab logo" onclick="showCar('volkswagen')">
+            <img class="logo_kep" src="/kepek/volkswagen.jpg" alt="Volkswagen Logo">
+            <span>Volkswagen</span>
+        </div>
+        <div class="tab logo" onclick="showCar('audi')">
+            <img class="logo_kep" src="/kepek/audi_logo.jpg" alt="Audi Logo">
+            <span>Audi</span>
+        </div>
+        <div class="tab logo" onclick="showCar('porsche')">
+            <img class="logo_kep" src="/kepek/porsche_logo.jpg" alt="Porsche Logo">
+            <span>Porsche</span>
+        </div>
+    </div>
+
+    <div id="bmw" class="car-section active">
+        <h2><img src="/kepek/BMW-Logo2.png" alt="" class="logo_kep2">BMW - Bayerische Motoren Werke</h2>
+        <p>A BMW (Bayerische Motoren Werke AG) története 1916-ra nyúlik vissza, amikor is a vállalatot Münchenben alapították. Kezdetben repülőmotorok gyártásával foglalkozott, de a Versailles-i békeszerződés után, 1919-ben, a cég kénytelen volt átalakítani tevékenységét, és autók, motorok gyártásával kezdett foglalkozni. Az első autójuk, a BMW 3/15, 1927-ben debütált. Azóta a BMW a prémium autóipar egyik legismertebb és legsikeresebb márkájává vált.
+A BMW M divíziója a sportos, magas teljesítményű modellek gyártásáért felel, és számos ikonikussá vált autóval büszkélkedhet. A legismertebb közülük a BMW M3 és a BMW M5.
+A BMW M5 CS egy különleges, limitált kiadású modell, amely az M5 sorozat csúcsát képviseli. A M5 CS 2021-ben debütált, és a legnagyobb teljesítményt kínálja a M5 modellek között. 4,4 literes V8-as motorja 635 lóerőt és 750 Nm nyomatékot biztosít, amely lehetővé teszi, hogy mindössze 3,0 másodperc alatt gyorsuljon 0-ról 100 km/h-ra. Az M5 CS emellett a könnyített anyagok és fejlesztett futómű révén kiváló kezelhetőséget és dinamizmust kínál. Az autó sportos és exkluzív jellege mellett kényelmes is maradt, és a BMW a legmagasabb szintű technológiai újításokat integrálta a modellbe. Az M5 CS a BMW teljesítmény-orientált autóinak megkoronázása, igazi csúcskategóriás sportlimuzin.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                    <div class="card" style="width: 350px; height: 500px;">
+                        <img src="kepek/BMW_328.webp" alt="" class="card_kep">
+                        <p>BMW 328: Az 1930-as évek sportautója, amely nagy sikert aratott a versenyeken is.</p>
+                        <p><b>Ár: 500-800 millió </b>FT</p>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="./kepek/BMW 507.webp" alt="" class="card_kep">
+                            <p>BMW 507: A '50-es évek klasszikus roadstere, amely a luxus és sportosság kombinációja volt.</p>
+                            <p><b>Ár: 700 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="./kepek/BMW 3.webp" alt="" class="card_kep">
+                            <p>BMW 3-as sorozat: Az egyik legismertebb és legkelendőbb modell, amely a kompakt prémium szegmensben uralkodik.</p>
+                            <p><b>Ár: 3-10 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mercedes" class="car-section">
+        <h2><img src="/kepek/mercedes_logo.jpg" alt="" class="logo_kep2"> Mercedes-Benz</h2>
+        <p>A Mercedes-Benz a prémium autóipar egyik legismertebb és legelismertebb márkáját képviseli. A Mercedes-Benz elődjei már a 19. század végén megjelentek, és a cég azóta is folyamatosan vezető szerepet játszik az autógyártásban.
+A márka gyökerei Carl Benz-hez és Gottlieb Daimler-hez nyúlnak vissza. Carl Benz 1886-ban készítette el a világ első autóját, a Benz Patent-Motorwagen-t, amelyet ma a világ első automobiljaként tartanak számon. Ezt követően Gottlieb Daimler és Wilhelm Maybach szintén nagy hatással voltak az autóiparra, amikor a Daimler-Motoren-Gesellschaft (DMG) nevű céget alapították. Az 1920-as években a két cég egyesült, és megszületett a Mercedes-Benz márka, amely azóta is a legnagyobb német prémium autógyártók közé tartozik.
+A Mercedes-Benz az évtizedek során számos mérföldkővel gazdagította az autóipart, és mindig is a technológiai újítások, a prémium minőség és a luxus képviselője volt. A márka legismertebb modelljei közé tartoznak:
+A Mercedes-AMG divízió a sportos és nagy teljesítményű modellekért felelős részleg, amely a Mercedes-Benz autóit még dinamikusabbá és erősebbé teszi. Az AMG modellek közül kiemelkedik például a Mercedes-AMG GT vagy a Mercedes-AMG E 63 S.
+A Mercedes-Benz sportos csúcsmodelljei közé tartozik az AMG GT Black Series, amely 2020-ban debütált. Az AMG GT Black Series a Mercedes-Benz teljesítmény-orientált autójának csúcsa, 730 lóerős V8-as motorral és egyedülálló aerodinamikai fejlesztésekkel.
+Az SLS AMG, amelyet 2010-ben mutattak be, szintén ikonikus helyet foglal el a márka történetében. Ez volt az első modell, amelyet teljes egészében az AMG divízió fejlesztett ki, és az egyik legismertebb sportautóvá vált.
+A Mercedes-Benz tehát az autóipar egyik legnagyobb német márkája, amely az eleganciát, a luxust és a technológiai újításokat ötvözi minden modelljében.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                    <div class="card" style="width: 350px; height: 500px;">
+                        <img src="kepek/Mercedes-Benz S-osztály.jpg" alt="" class="card_kep">
+                        <p>Mercedes-Benz S-osztály: Az autóipar csúcsa, amely a legújabb technológiai újításokat és a legnagyobb luxust ötvözi. Az S-osztály a prémium limuzinok és a vezetői autók királya.</p>
+                        <p><b>Ár: 40 millió</b>FT</p>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="kepek/Mercedes-Benz E-osztály.jpg" alt="" class="card_kep">
+                            <p>Mercedes-Benz E-osztály: A középkategóriás prémium szedán, amely a márka eleganciáját és innovációját hordozza.</p>
+                            <p><b>Ár: 30 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="kepek/Mercedes-Benz G-osztály.jpg" alt="" class="card_kep">
+                            <p>Mercedes-Benz G-osztály: A legendás terepjáró, amelyet a Mercedes-Benz a katonai és civil piac számára egyaránt gyártott, és mára igazi státuszszimbólummá vált.</p>
+                            <p><b>Ár: 50 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="volkswagen" class="car-section">
+        <div>
+            <h2><img src="/kepek/volkswagen.jpg" alt="" class="logo_kep2"> Volkswagen</h2>
+            <h5>VolksWagen - Das auto</h5>
+            <p>A Volkswagen története szorosan összefonódik a 20. századi autóipari fejlődéssel, és a világ egyik legismertebb és legnagyobb autógyártójává nőtte ki magát.
+A Volkswagen alapítása 1937-re nyúlik vissza, amikor is a Német Munkásfront (Deutsche Arbeitsfront, DAF) létrehozta a „Volkswagenwerk GmbH”-t, vagyis a „Volksággazdasági Művek”-et, hogy megvalósítson egy olyan autógyártási projektet, amely elérhető áron kínál közlekedési lehetőséget a német munkásosztály számára. Az akkori autóiparban a gépkocsik még nem voltak hozzáférhetők a szélesebb rétegek számára.
+Az első, világszerte ismert modell a Volkswagen Beetle (bogár) volt, amely 1938-ban jelent meg. A modellt a híres német mérnök, Ferdinand Porsche tervezte, és bár kezdetben a háborús időszakban korlátozott gyártás indult, a második világháború után a Beetle népszerűsége hatalmasat nőtt. A Beetle különleges formája, megbízhatósága és megfizethetősége miatt világszerte több mint 21 millió példányban kelt el, így egyike a történelem legnagyobb példányszámban eladott autóinak.
+A Volkswagen az évtizedek során folytatta a fejlődést és bővítette modellkínálatát.
+A Volkswagen csoport az idők során több nagy autómárkát is felvásárolt, például az Audi, Porsche, Bentley, Lamborghini és Bugatti márkákat, így a VW az autóipar egyik legnagyobb konszernjévé vált.
+A Volkswagen Golf GTI és a Volkswagen Golf R a márka sportosabb változatai, amelyek a teljesítmény és a vezetési élmény terén kiemelkednek. A Golf GTI 1976-ban debütált, és mára egy kultikus modellel vált, amely a sportos kompakt autók egyik mércéjévé vált.
+A legújabb irányvonal a Volkswagen ID. elektromos járműsorozata, amely az elektromos mobilitás jövőjét célozza meg. Az ID.3, ID.4 és ID. Buzz modellek egyértelműen jelzik a Volkswagen elköteleződését az elektromos autók iránt. Az ID. sorozat a modern, fenntartható autózás irányába tett komoly lépés, miközben a márka hagyományos modelleket is tovább fejleszti.
+A Volkswagen tehát egy ikonikus német autógyártó, amely a gazdaságos és megbízható autóktól kezdve a luxus- és sportmodelleken át az elektromos járművekig széles modellportfólióval rendelkezik. Az évtizedek során a Volkswagen nemcsak az autóiparban, hanem a globális gazdaságban is meghatározó szereplővé vált.</p>
+        </div>
+        <center><h1>Modelleink</h1></center> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                    <div class="card" style="width: 350px; height: 500px;">
+                        <img src="./kepek/wv polo.jpg" alt="" class="card_kep">
+                        <p>Volkswagen Polo: A kisautó szegmensben indult el 1975-ben, és azóta a kisautók piacának egyik sikeres szereplőjévé vált.</p>
+                        <p><b>Ár: 200k-4 millió</b>FT</p>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="./kepek/vw passat.webp" alt="" class="card_kep">
+                            <p>Volkswagen Passat: A középkategóriás szedán, amely 1973-ban debütált. A Passat évek óta a családi autók egyik legnépszerűbb választása.</p>
+                            <p><b>Ár: 200k-3 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="./kepek/vw golf4.webp" alt="" class="card_kep">
+                            <p>Volkswagen Golf: 1974-ben bemutatott modell, amely az autóipar egyik legnépszerűbb kompaktja lett. A Golf a márka egyik legismertebb modellje, és világszerte több mint 35 millió példányban kelt el. A Golf szintén a VW híres "hatchback" formáját népszerűsítette.</p>
+                            <p><b>Ár: 300k-2 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="audi" class="car-section">
+        <h2><img src="/kepek/audi_logo.jpg" alt="" class="logo_kep2"> Audi</h2>
+        <p>A Audi története szintén egy meghatározó fejezet az autóiparban. Az Audi név  az August Horch nevű mérnökhöz és vállalkozóhoz kapcsolódik, aki 1909-ben alapította meg saját autógyárát, miután kilépett előző cégéből, a Horch Autógyárból. A "Audi" név a latinosított változata az "Horch" (ami németül "hallani" jelentésű) szónak. Az Audi tehát 1909-től létezik, és kezdetben prémium autók gyártásával foglalkozott.
+Az Audi a Volkswagen Csoport részeként, a "Vorsprung durch Technik" (Előny a technikán keresztül) szlogennel vált világszerte ismertté, amely a márka iránti elkötelezettséget és innovációt hangsúlyozza. Az Audi modellek híresek a technológiai újításaikról, prémium minőségükről és sportos vezetési élményükről.
+A márka legismertebb modelljei közé tartoznak:
+A Audi tehát olyan márka, amely mindig is a technológiai innovációt, a prémium minőséget és a sportos karaktert hozta össze, és az S8 L ABT ezt az örökséget még tovább emeli, hogy a vásárlók számára egy egyedülálló autóélményt nyújtson.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                    <div class="card" style="width: 350px; height: 500px;">
+                        <img src="kepek/Audi A3.jpg" alt="" class="card_kep">
+                        <p>Audi A3: A kompakt prémium szegmensben meghatározó szereplő, amely szintén a márka modern dizájnját és technológiai újításait hozta el.</p>
+                        <p><b>Ár: 1 millió</b>FT</p>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="kepek/Audi A4.jpg" alt="" class="card_kep">
+                            <p>Audi A4: A középkategóriás szedán, amely a prémium autók világában egy igazi etalon, és amely számos technológiai újítást kínál.</p>
+                            <p><b>Ár: 3 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="kepek/Audi A8.jpg" alt="" class="card_kep">
+                            <p>Audi A8: Az Audi csúcsmodellje, amely a luxusautók között kiemelkedő helyet foglal el. A A8 a prémium szegmens csúcsát képviseli, és folyamatosan új technológiai megoldásokat kínál a vezetőknek.</p>
+                            <p><b>Ár: 5-6 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="porsche" class="car-section">
+        <h2><img src="/kepek/porsche_logo.jpg" alt="" class="logo_kep2"> Porsche</h2>
+        <p>A Porsche története az autóipar egyik legismertebb és legelismertebb fejezetét jelenti, és az ikonikus sportautók megtestesítője. A vállalatot Ferdinand Porsche alapította 1931-ben, a Porsche mérnöki irodát (Dr. Ing. h.c. F. Porsche GmbH) Münchenben. A kezdetekben nem autókat, hanem autóipari mérnöki szolgáltatásokat és tanácsadást kínáltak, azonban az igazi áttörést az autók tervezése hozta.
+Az első nagy sikerű projektjük a Volkswagen Beetle (más néven Bogár) volt, amelyet Ferdinand Porsche tervezett a Volkswagen számára. Ezt követően a Porsche cége elkezdett saját autókat tervezni, és az első modell, amely a Porsche 356 néven vált ismertté, 1948-ban jelent meg. A Porsche 356 egy könnyű, sportos autó volt, amely szinte azonnal meghódította a piacot. Az autó sikerét követően a Porsche márka híre gyorsan elterjedt, és a cég a sportautók világában meghatározó szereplővé vált.
+A Porsche emblematikus autói közé tartoznak:
+A Porsche mindig is a teljesítmény, az innováció és a precizitás megtestesítője volt, és az autók mellett az autóversenyzés világában is kiemelkedő szerepet játszott. A Porsche 917-es és 935-ös modellek legendásak a Le Mans-i 24 órás versenyek történetében.
+A Porsche Taycan az első teljesen elektromos sportautója a márkának, amely 2019-ben debütált. A Taycan az elektromos járművek piacán új mércét állít, hiszen nemcsak környezetbarát, hanem a Porsche híres teljesítményét is megőrzi, rendkívül dinamikus vezetési élményt kínálva.
+A Porsche tehát nemcsak a luxus sportautók és szupersportautók gyártásában játszik kulcsszerepet, hanem folyamatosan innovál és bővíti portfólióját, hogy a jövő mobilitási kihívásainak is megfeleljen, miközben megőrzi azokat az értékeket, amelyekért a márka híres: teljesítmény, precizitás és elegancia.
+A Porsche tehát mindig is a legmagasabb szintű sportautókat és technológiai innovációkat képviselte, és a jövőben is várható, hogy továbbra is vezető szerepet játszik az autóiparban.</p>
+A Porsche 918 Spyder a cég egyik leginnovatívabb és legdrágább autója, amely 2015-ben debütált. Ez egy hibrid sportautó, amely a hagyományos Porsche sportautók teljesítményét kombinálja a legmodernebb hibrid technológiával, így az egyik leggyorsabb és legfejlettebb autó a piacon.
+<div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                    <div class="card" style="width: 350px; height: 500px;">
+                        <img src="kepek/Porsche 911.jpg" alt="" class="card_kep">
+                        <p>Porsche 911: Az egyik legismertebb sportautó a világon, amely 1964-es bemutatója óta folyamatosan gyártásban van, és a márka legismertebb modellje. A 911-es széria a legendás "nyújtott" formájával, hátsókerék-meghajtásával és erőteljes motorjaival vált ikonikussá. A Porsche 911 folyamatosan fejlődik, de mindig megőrzi azt a jellegzetes sportos karaktert, ami az első modellt is jellemezte.</p>
+                        <p><b>Ár: 20 millió</b>FT</p>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="kepek/Porsche Boxster.jpg" alt="" class="card_kep">
+                            
+                            <p>Porsche Boxster: 1996-ban bemutatott középmotoros roadster, amely új irányt képviselt a Porsche kínálatában. A Boxster a sportos vezetési élményt és a kabrió élményt kombinálja, és jelentős szerepet játszott a Porsche értékesítésének növekedésében a 2000-es évek elején.</p>
+                            <p><b>Ár: 30 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <div class="card" style="width: 350px; height: 500px;">
+                            <img src="/kepek/Porsche Cayenne.jpg" alt="" class="card_kep">
+                            <p>Porsche Cayenne: A Porsche 2002-ben lépett be a luxus SUV piacra a Cayenne modellel. Ez az autó hatalmas sikert aratott, és új vásárlókat vonzott a Porsche márkához, kiegészítve a sportos autókat a nagy teljesítményű terepjárókkal.</p>
+                            <p><b>Ár: 40 millió</b>FT</p>
+                        </div>
+                        </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Itt van a footer. Kéne valami szöveg ide is</p>
+    </footer>
+
+    <script>
+        function showCar(brand) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.car-section').forEach(section => section.classList.remove('active'));
+            document.querySelector(`.tab[onclick="showCar('${brand}')"]`).classList.add('active');
+            document.getElementById(brand).classList.add('active');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
