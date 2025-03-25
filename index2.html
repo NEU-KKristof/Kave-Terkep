@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kávé világ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5e8d3, #ffffff);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: linear-gradient(to right, #3c2f2f, #6b4e31);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.8em;
+            animation: slideInFromTop 1s ease-out;
+        }
+        nav {
+            background: #6b4e31;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+        nav a:hover {
+            color: #d4a373;
+            transform: scale(1.1);
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #d4a373;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .map-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            width: 80%;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+        .map {
+            width: 100%;
+            height: 60vh; /* Relative to viewport height */
+            max-height: 500px;
+            background: #e0f7fa;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            animation: fadeIn 1.5s ease-in;
+            background-image: url(hatter.jpg);
+            background-repeat: no-repeat;
+        }
+        .marker {
+            position: absolute;
+            width: 2vw; /* Scales with viewport width */
+            height: 2vw;
+            max-width: 20px;
+            max-height: 20px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .marker:hover {
+            transform: scale(1.4);
+            box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+        }
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .content.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content h2 {
+            color: #3c2f2f;
+            font-size: 2em;
+            margin-bottom: 15px;
+            animation: slideInFromLeft 0.5s ease-out;
+        }
+        .content p {
+            font-size: 1.2em;
+            animation: slideInFromRight 0.5s ease-out;
+        }
+        footer {
+            background: linear-gradient(to right, #3c2f2f, #6b4e31);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        footer p {
+            margin: 0 20px;
+            font-size: 1em;
+        }
+        footer .social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        footer .social a:hover {
+            color: #d4a373;
+            transform: scale(1.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInFromRight {
+            from { transform: translateX(30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2em; }
+            nav a { margin: 0 15px; font-size: 1em; }
+            .map { height: 50vh; }
+            .content { margin: 20px 10px; padding: 20px; }
+            .content h2 { font-size: 1.7em; }
+            .content p { font-size: 1.1em; }
+            footer { flex-direction: column; padding: 15px; }
+            footer p, footer .social { margin: 10px 0; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 25px 15px; }
+            header h1 { font-size: 1.8em; }
+            nav { padding: 10px 0; }
+            nav a { margin: 0 10px; font-size: 0.9em; }
+            .map { height: 40vh; }
+            .marker { width: 3vw; height: 3vw; max-width: 15px; max-height: 15px; }
+            .content { margin: 15px 5px; padding: 15px; }
+            .content h2 { font-size: 1.4em; }
+            .content p { font-size: 1em; }
+            footer p { font-size: 0.9em; }
+            footer .social a { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Coffee Growing Regions</h1>
+    </header>
+
+    <nav>
+        <a href="#">gomb1</a>
+        <a href="#">gomb2</a>
+        <a href="#">gomb3</a>
+    </nav>
+
+    <div class="map-container">
+        <div class="map">
+            <div class="marker" style="top: 20%; left: 25%;" onclick="loadRegion('terulet1')"></div>
+            <div class="marker" style="top: 30%; left: 30%;" onclick="loadRegion('terulet2')"></div> 
+            <div class="marker" style="top: 40%; left: 20%;" onclick="loadRegion('terulet3')"></div>
+            <div class="marker" style="top: 60%; left: 70%;" onclick="loadRegion('terulet4')"></div>
+            <div class="marker" style="top: 50%; left: 75%;" onclick="loadRegion('terulet5')"></div> 
+            <div class="marker" style="top: 70%; left: 65%;" onclick="loadRegion('terulet6')"></div>
+            <div class="marker" style="top: 25%; left: 85%;" onclick="loadRegion('terulet7')"></div>
+            <div class="marker" style="top: 35%; left: 90%;" onclick="loadRegion('terulet8')"></div>
+            <div class="marker" style="top: 10%; left: 40%;" onclick="loadRegion('terulet9')"></div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <h2>Welcome to Coffee Growing Regions</h2>
+        <p>Click on a marker on the map above to explore the world's top coffee-growing regions. Learn about the unique climates, soils, and traditions that make each area's coffee special.</p>
+    </div>
+
+    <footer>
+        <p>A legkelentősebb kávé termesztő területek a földön</p>
+        <div class="social">
+            <a href="#" aria-label="Twitter"></a>
+            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="Facebook"></a>
+        </div>
+    </footer>
+
+    <script>
+        function loadRegion(region) {
+            const content = document.getElementById('content');
+            content.classList.remove('active');
+            setTimeout(() => {
+                let title, text;
+
+                switch(region) {
+                    case 'colombia':
+                        title = 'terület1';
+                        text = 'A szöveg az első régióról';
+                        break;
+                    case 'brazil':
+                        title = 'terület2';
+                        text = 'Placeholder text for Brazil coffee region.';
+                        break;
+                    case 'peru':
+                        title = 'terület3';
+                        text = 'Placeholder text for Peru coffee region.';
+                        break;
+                    case 'ethiopia':
+                        title = 'terület4';
+                        text = 'Placeholder text for Ethiopia coffee region.';
+                        break;
+                    case 'kenya':
+                        title = 'terület5';
+                        text = 'Placeholder text for Kenya coffee region.';
+                        break;
+                    case 'rwanda':
+                        title = 'terület6';
+                        text = 'Placeholder text for Rwanda coffee region.';
+                        break;
+                    case 'vietnam':
+                        title = 'terület7';
+                        text = 'Placeholder text for Vietnam coffee region.';
+                        break;
+                    case 'indonesia':
+                        title = 'terület8';
+                        text = 'Placeholder text for Indonesia coffee region.';
+                        break;
+                    case 'guatemala':
+                        title = 'terület9';
+                        text = 'Placeholder text for Guatemala coffee region.';
+                        break;
+                    default:
+                        title = 'Köszöntünk a kávé világ';
+                        text = 'Click on a marker on the map above to explore the world\'s top coffee-growing regions.';
+                }
+
+                content.innerHTML = `<h2>${title}</h2><p>${text}</p>`;
+                content.classList.add('active');
+            }, 200);
+        }
+
+        // Initial animation trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('content').classList.add('active');
+        });
+    </script>
+</body>
+</html>
