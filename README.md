@@ -11,7 +11,15 @@ projekt-gyoker/ <br>
 ├── README.md              # Projekt leírása, telepítési útmutató, stb. <br>
 ├── website/                  # Dokumentáció (API leírások, felhasználói útmutatók) <br>
 │   ├── api/ <br>
-│   └── user_guide/ <br>
+│   └── 
 ├── img/ <br>
 │   ├── api/ <br>
-│   └── user_guide/ <br>
+│   |── Bourbon.jpg
+│   |── Selection 9.webp
+│   |── castillo.webp
+│   |── catimor.jpg
+│   |── coffeebean_icon.png
+│   |── green-coffee-beans.jpg
+│   |── heirloom.jpg
+│   |── robusta.jpg
+│   └── ruiro 11.webp
