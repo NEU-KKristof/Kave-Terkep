@@ -6,20 +6,29 @@ Afrika <br>
 Drótváz https://www.figma.com/design/YTea7xtRgAaN3KuaIFrr1Z/Untitled?node-id=0-1&t=S8AFDMoV6NW4izsg-1
 
 projekt-gyoker/ <br>
-├── ./                  # Git verziókövetéshez (általában rejtett) <br>
-├── .gitignore             # Git által figyelmen kívül hagyandó fájlok és mappák listája <br>
-├── README.md              # Projekt leírása, telepítési útmutató, stb. <br>
-├── website/                  # Dokumentáció (API leírások, felhasználói útmutatók) <br>
-│   ├── api/ <br>
-│   └── 
+├── ./               <br>
+├── .gitignore              <br>
+├── README.md              <br>
+├── website/                   <br>
+│   ├── connection.php<br>
+│   ├── index.php<br>
+│   ├── insert.php<br>
+│   ├── login.php<br>
+│   ├── login_process.php<br>
+│   ├── logout.php<br>
+│   ├── navbar.php<br>
+│   ├── rolunk.php<br>
+│   ├── signup.php<br>
+│   ├── signup_process.php<br>
+│   └── style.css<br>
 ├── img/ <br>
-│   ├── api/ <br>
-│   |── Bourbon.jpg
-│   |── Selection 9.webp
-│   |── castillo.webp
-│   |── catimor.jpg
-│   |── coffeebean_icon.png
-│   |── green-coffee-beans.jpg
-│   |── heirloom.jpg
-│   |── robusta.jpg
-│   └── ruiro 11.webp
+│   |── Bourbon.jpg<br>
+│   |── Selection 9.webp<br>
+│   |── castillo.webp<br>
+│   |── catimor.jpg<br>
+│   |── coffeebean_icon.png<br>
+│   |── green-coffee-beans.jpg<br>
+│   |── heirloom.jpg<br>
+│   |── robusta.jpg<br>
+│   └── ruiro 11.webp<br>
+
