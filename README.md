@@ -5,7 +5,6 @@ Afrika <br>
 
 Drótváz https://www.figma.com/design/YTea7xtRgAaN3KuaIFrr1Z/Untitled?node-id=0-1&t=S8AFDMoV6NW4izsg-1
 
-projekt-gyoker/ <br>
 ├── ./               <br>
 ├── .gitignore              <br>
 ├── README.md              <br>
