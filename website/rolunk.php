@@ -120,9 +120,20 @@ p {
 }
 </style>
 
-dsg.adő,gdaőpgmdaopgnmdouiagbniduab igaub dogbsao bgaosi gpias goöaisbg ouas gpn
+<center>
+<div style="font-size: 25px; width: 70%;">
+<h1>Rólunk</h1>
 
+<p> Üdvözlünk a Kávévilág rólunk oldalon! Ezt a weboldalt iskolai projektként készítettük, hogy bemutassuk a világ fő kávétermesztő vidékeit. Az oldalon kontinensenkénti bontásban ismerheted meg ezeket a területeket. <br><br>
 
+A fejlesztéshez HTML, CSS, JavaScript és PHP technológiákat használtunk. A weboldal regisztrációt és bejelentkezést is lehetővé tesz. <br><br>
+
+<b> Készítők:</b> Karanyicz Kristóf, Tóth Roland, Ferenc Áron <br>
+Neumann János Gimnázium, Technikum és Kollégium
+
+</p>
+</div>
+</center>
 
 </body>
 </html>
