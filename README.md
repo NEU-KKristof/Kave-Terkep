@@ -1,3 +1,7 @@
+Telepités: A zip file-ba található website és img részt tegye a C:\xampp\htdocs mappába. Inditsa el a szervert. Az adatbázishoz a megadott parancsokon haladjon végig.
+
+
+
 Drótváz https://www.figma.com/design/YTea7xtRgAaN3KuaIFrr1Z/Untitled?node-id=0-1&t=S8AFDMoV6NW4izsg-1
 
 ├── ./               <br>
